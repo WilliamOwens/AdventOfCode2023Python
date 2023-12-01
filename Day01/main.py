@@ -73,6 +73,7 @@ def solution(calibrationDocument, useWords):
       if (line[l].isnumeric()):
         lineNumber += int(line[l]) * 10
         lookingLeft = False
+      # This elif block is skipped if only looking for numbers
       elif (lookingLeft and useWords and TRANSLATION.get(line[l])):
         numToCheck = helper(line, l, False)
         if (numToCheck):
@@ -87,6 +88,7 @@ def solution(calibrationDocument, useWords):
       if (reversedLine[rev].isnumeric()):
         lineNumber += int(reversedLine[rev])
         lookingRight = False
+      # This elif block is skipped if only looking for numbers
       elif (lookingRight and useWords and REV_TRANSLATION.get(reversedLine[rev])):
         numToCheck = helper(reversedLine, rev, True)
         if (numToCheck):
@@ -103,5 +105,6 @@ def solution(calibrationDocument, useWords):
 
 if __name__ == "__main__":
     _input = readFile("input.txt")
+    # False only checks for numbers, True checks for words and numbers
     print(solution(_input, False))
     print(solution(_input, True))
