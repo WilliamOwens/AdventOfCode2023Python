@@ -1,12 +1,12 @@
 import os
 
 TRANSLATION = {
-   'o': ['one'],
-   't': ['two', 'three'],
-   'f': ['four', 'five'],
-   's': ['six', 'seven'],
-   'e': ['eight'],
-   'n': ['nine'],
+   'o': [3],
+   't': [3,5],
+   'f': [4],
+   's': [3,5],
+   'e': [5],
+   'n': [4],
 }
 
 NUM_TRANSLATION = {
@@ -22,12 +22,12 @@ NUM_TRANSLATION = {
 }
 
 REV_TRANSLATION = {
-   'e': ['eno', 'eerht', 'evif', 'enin'],
-   'o': ['owt'],
-   'r': ['ruof'],
-   'x': ['xis'],
-   'n': ['neves'],
-   't': ['thgie'],
+   'e': [3,4,5],
+   'o': [3],
+   'r': [4],
+   'x': [3],
+   'n': [5],
+   't': [5],
 }
 
 def readFile(fileName):
@@ -40,12 +40,12 @@ def readFile(fileName):
 def helper(line, position, reversed):
   if not reversed:
     for num in TRANSLATION.get(line[position]):
-      if (NUM_TRANSLATION.get(line[position:(len(num) + position)])):
-        return NUM_TRANSLATION.get(line[position:(len(num) + position)])
+      if (NUM_TRANSLATION.get(line[position:(num + position)])):
+        return NUM_TRANSLATION.get(line[position:(num + position)])
   else:
     for num in REV_TRANSLATION.get(line[position]):
-      if ( NUM_TRANSLATION.get(line[(position + 1 - len(num)):position + 1])):
-        return NUM_TRANSLATION.get(line[(position + 1 - len(num)):position + 1])
+      if ( NUM_TRANSLATION.get(line[(position + 1 - num):position + 1])):
+        return NUM_TRANSLATION.get(line[(position + 1 - num):position + 1])
   return 0
 
 
