@@ -1,8 +1,8 @@
-# 2023 Day 01: Calorie Counting
+# 2023 Day 01: Trebuchet?!
 Copyright (c) Eric Wastl
 #### [Direct Link](https://adventofcode.com/2023/day/1)
 
-## Part 1 (TODO)
+## Part 1
 You try to ask why they can't just use a weather machine ("not powerful enough") and where they're even sending you ("the sky") and why your map looks mostly blank ("you sure ask a lot of questions") and hang on did you just say the sky ("of course, where do you think snow comes from") when you realize that the Elves are already loading you into a trebuchet ("please hold still, we need to strap you in").
 
 As they're making the final adjustments, they discover that their calibration document (your puzzle input) has been **amended** by a very young Elf who was apparently just excited to show off her art skills. Consequently, the Elves are having trouble reading the values on the document.
@@ -22,7 +22,7 @@ In this example, the calibration values of these four lines are `12`, `38`, `15`
 
 Consider your entire calibration document. **What is the sum of all of the calibration values?**
 
-## Part 2 (TODO)
+## Part 2
 Your calculation isn't quite right. It looks like some of the digits are actually **spelled out with letters**: `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, and `nine` **also** count as valid "digits".
 
 Equipped with this new information, you now need to find the real first and last digit on each line. For example:
