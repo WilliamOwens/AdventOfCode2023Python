@@ -1,6 +1,6 @@
 # 2023 Day 02:
 Copyright (c) Eric Wastl
-#### [Direct Link](https://adventofcode.com/2023/day/2)
+#### Direct Link
 
 ## Part 1
 
